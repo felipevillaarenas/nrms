@@ -56,7 +56,11 @@ class NewsDataset(Dataset):
             lines = file.readlines()
         sessions = []
         for line in lines:
-            userid, _, click, imps = line.strip().split("\t")
+            line_strip = line.strip().split("\t")
+            if len(line_strip) == 4:
+                userid, _, click, imps = line_strip
+            else:
+                _, userid, _, click, imps = line_strip
             clicks = click.split(" ")
             pos = []
             neg = []
