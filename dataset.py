@@ -56,7 +56,7 @@ class NewsDataset(Dataset):
             lines = file.readlines()
         sessions = []
         for line in lines:
-            _, userid, _, click, imps = line.strip().split("\t")
+            userid, _, click, imps = line.strip().split("\t")
             clicks = click.split(" ")
             pos = []
             neg = []
@@ -215,6 +215,6 @@ class NewsDataset(Dataset):
         return doc_label
 
 if __name__ == '__main__':
-    ds = NewsDataset(hparams, './data/raw/MINDlarge_train')
+    ds = NewsDataset(hparams, './data/raw/MINDsmall_train')
     for i in tqdm(ds):
         pass

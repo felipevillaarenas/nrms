@@ -11,7 +11,7 @@ import torch
 from torch.utils import data
 
 import pytorch_lightning as pl
-from pytorch_ranger import Ranger
+from ranger import Ranger
 
 from dataset import NewsDataset
 from model.net import NRMS

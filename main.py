@@ -39,8 +39,7 @@ logger = TensorBoardLogger(
     version=hparams["version"]
 )
 
-trainer = Trainer(max_epochs=args.epochs,
-                  #gpus=1,
+trainer = Trainer(max_epochs=args.epochs,#gpus=1,
                   early_stop_callback=early_stop,
                   weights_summary='full',
                   checkpoint_callback=checkpoint_callback,

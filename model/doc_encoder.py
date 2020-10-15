@@ -11,7 +11,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from newsrecom.model.attention import  AdditiveAttention
+from model.attention import  AdditiveAttention
 
 
 class DocEncoder(nn.Module):

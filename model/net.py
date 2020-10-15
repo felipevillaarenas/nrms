@@ -14,8 +14,8 @@ relatedness between the news.
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from newsrecom.model.doc_encoder import DocEncoder
-from newsrecom.model.attention import  AdditiveAttention
+from model.doc_encoder import DocEncoder
+from model.attention import  AdditiveAttention
 
 
 class NRMS(nn.Module):
